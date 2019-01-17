@@ -1,0 +1,36 @@
+
+import random 
+
+
+class RollDice:
+    x = 0
+
+    while x >= 0:
+
+        dice = input("""Roll The Dice!! 
+        press r to roll, q to quit: """)
+    
+        if dice == ('q'):
+            break
+        
+        elif dice == ('r'):
+            for x in range(2):
+                print (random.randint(1,6))
+                print (random.randint(1,6))
+                tr = input("""Want to play again?
+                                type yes or no: """)
+                if tr == ("yes"):
+                    x = x + 1
+
+                elif tr == ("no"):
+                    x = x - 100
+
+                else:
+                    print("syntax error, try again!")
+                    x = x + 1
+                    
+            
+        else:
+            print("syntax error, try again!")
+
+            
